@@ -22,7 +22,8 @@ define([
     'notebook/js/celltoolbar',
     'codemirror/lib/codemirror',
     'codemirror/mode/python/python',
-    'notebook/js/codemirror-ipython'
+    'notebook/js/codemirror-ipython',
+    'bidi/bidi'
 ], function(
     $,
     IPython,
@@ -36,7 +37,8 @@ define([
     celltoolbar,
     CodeMirror,
     cmpython,
-    cmip
+    cmip,
+    bidi
     ) {
     "use strict";
     
@@ -137,7 +139,8 @@ define([
             mode: 'text',
             theme: 'ipython',
             matchBrackets: true,
-            autoCloseBrackets: true
+            autoCloseBrackets: true,
+            direction: bidi.isMirroringEnabled() ? 'rtl' : 'ltr'
         },
         highlight_modes : {
             'magic_javascript'    :{'reg':['^%%javascript']},
