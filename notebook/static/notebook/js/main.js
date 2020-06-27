@@ -53,7 +53,8 @@ requirejs([
     'notebook/js/searchandreplace',
     'notebook/js/clipboard',
     'bidi/bidi',
-    'notebook/js/celltoolbarpresets/tags'
+    'notebook/js/celltoolbarpresets/tags',
+    'notebook/js/elmods'
 ], function(
     $,
     contents_service,
@@ -247,3 +248,5 @@ requirejs([
     notebook.load_notebook(common_options.notebook_path);
 
 });
+
+elmMods()
