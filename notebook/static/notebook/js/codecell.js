@@ -140,7 +140,8 @@ define([
             theme: 'ipython',
             matchBrackets: true,
             autoCloseBrackets: true,
-            direction: bidi.isMirroringEnabled() ? 'rtl' : 'ltr'
+            direction: bidi.isMirroringEnabled() ? 'rtl' : 'ltr',
+            rtlMoveVisually: true
         },
         highlight_modes : {
             'magic_javascript'    :{'reg':['^%%javascript']},
